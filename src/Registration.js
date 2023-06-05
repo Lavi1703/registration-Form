@@ -16,7 +16,7 @@ function Registration() {
 
     })
     const [records,setRecords] = useState([])
-    const handleInput =(e)=>{
+    const handleInput  =(e)=>{
       const name=e.target.name
       const value = e.target.value;
       setRegistration({...userRegistration,[name]:value})
@@ -48,44 +48,44 @@ function Registration() {
            <tbody>
               <tr>
                 <td><label htmlFor="name">Name</label></td>
-                <td><input type="text" id="name" onChange={handleInput} value={userRegistration.name} name="name"/></td>
+                <td><input type="text" id="name" onChange={handleInput} value={userRegistration.name} name="name" required/></td>
               </tr>
               <tr>
                 <td><label htmlFor="email">Email</label></td>
-                <td><input type="email" id="email"onChange={handleInput} value={userRegistration.email} name="email"/></td>
+                <td><input type="email" id="email"onChange={handleInput} value={userRegistration.email} name="email" required/></td>
               </tr>
               <tr>
                 <td><label htmlFor="mob">Mobile Number</label></td>
-                <td><input type="number" id="mob"onChange={handleInput} value={userRegistration.mob} name="mob"/></td>
+                <td><input type="number" id="mob"onChange={handleInput} value={userRegistration.mob} name="mob" required/></td>
               </tr>
               <tr>
                 <td><label htmlFor="dob">Date of Birth</label></td>
-                <td><input type="date" id="dob"onChange={handleInput} value={userRegistration.dob} name="dob"/></td>
+                <td><input type="date" id="dob"onChange={handleInput} value={userRegistration.dob} name="dob" required/></td>
               </tr>
               <tr>
                 <td><label htmlFor="address">Address</label></td>
-                <td> <input type="text" id="address"onChange={handleInput} value={userRegistration.address} name="address"/></td>
+                <td> <input type="text" id="address"onChange={handleInput} value={userRegistration.address} name="address" required/></td>
               </tr>
               <tr>
                 <td><p>Gender</p></td>
-                <td><input type="radio" id="male"onChange={handleInput} value="Male" name="radio1"/>
+                <td><input type="radio" id="male"onChange={handleInput} value="Male" name="radio1" required/>
                     <label htmlFor="male">Male</label>
-                    <input type="radio" id="female"onChange={handleInput} value="Female" name="radio1"/>
+                    <input type="radio" id="female"onChange={handleInput} value="Female" name="radio1" required/>
                     <label htmlFor="female">Female</label>
                 </td>
               </tr>
               <tr>
                 <td><p>Marital Status</p></td>
-                <td> <input type="radio" id="married"onChange={handleInput} value="Married" name="radio2"/>
+                <td> <input type="radio" id="married"onChange={handleInput} value="Married" name="radio2" required/>
                      <label htmlFor="married">Married</label>
-                     <input type="radio" id="unmarried"onChange={handleInput} value="UnMarried" name="radio2"/> 
+                     <input type="radio" id="unmarried"onChange={handleInput} value="UnMarried" name="radio2" required/> 
                      <label htmlFor="married">UnMarried</label>
                 </td>
               </tr>
               <tr>
                 <td><label htmlFor="country">Country</label></td>
                 <td> 
-                    <select id="country" name="country" onChange={handleInput}>
+                    <select id="country" name="country" onChange={handleInput} required>
                         <option value=""></option>
                         <option value="USA">USA</option>
                         <option value="India">India</option>
@@ -95,7 +95,7 @@ function Registration() {
               <tr>
                 <td><label htmlFor="state">State</label></td>
                 <td> 
-                <select id="state" name="state" onChange={handleInput}>
+                <select id="state" name="state" onChange={handleInput} required>
                     <option value=""></option>
                     <option value="Banglore">Banglore</option>
                     <option value="Delhi">Delhi</option>
@@ -107,7 +107,7 @@ function Registration() {
                 <label htmlFor="pin">Pin Code</label>
                 </td>
                 <td>
-                <input type="text" id="pin"onChange={handleInput} value={userRegistration.pin} name="pin"/>
+                <input type="number" id="pin"onChange={handleInput} value={userRegistration.pin} name="pin" required/>
                 </td>
               </tr>
               <tr>
